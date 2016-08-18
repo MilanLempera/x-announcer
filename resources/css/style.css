@@ -1,0 +1,36 @@
+.x-announcer-icon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    opacity: 0.3;
+
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+}
+
+.x-announcer-icon:hover {
+    opacity: 1;
+}
+
+.x-announcer-icon::selection {
+    background: transparent;
+}
+
+x-announcer .overlay {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    z-index: 9999;
+}
+
+x-announcer form {
+    padding: 10px;
+    width: 400px;
+    background: white;
+    border: 1px solid gray;
+}
+
+x-announcer input[name=selection] {
+    color: grey;
+}
