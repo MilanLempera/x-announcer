@@ -1,16 +1,13 @@
 .x-announcer-icon {
     position: fixed;
-    top: 20px;
+    top: 0px;
     right: 20px;
     opacity: 0.3;
-
-    -webkit-transition: opacity 400ms ease-in;
-    -moz-transition: opacity 400ms ease-in;
-    transition: opacity 400ms ease-in;
+    transition: opacity 100ms ease-in;
 }
 
 .x-announcer-icon:hover {
-    opacity: 1;
+    opacity: 0.9;
 }
 
 .x-announcer-icon::selection {
@@ -22,6 +19,19 @@ x-announcer .overlay {
     top: 0px;
     right: 0px;
     z-index: 9999;
+}
+
+x-announcer .row {
+    margin: 10px 0;
+}
+
+x-announcer label {
+    display: block;
+}
+
+x-announcer textarea {
+    width: 100%;
+    box-sizing: border-box;
 }
 
 x-announcer form {
