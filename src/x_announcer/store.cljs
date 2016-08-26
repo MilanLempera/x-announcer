@@ -1,28 +1,30 @@
 (ns x-announcer.store
-  (:require [matchbox.core :as match]
-            [goog.string :as gstring]
+  (:require [clojure.string :as str]
+            [matchbox.core :as match]
             [goog.string.format]))
 
-(def base-uri (atom ""))
+(def firebase (atom {}))
 
-(defn set-url [url]
-  (reset! base-uri url))
+(defn firebase-settings! [url path]
+  (let [set-new-values (fn []
+                         {:url  url
+                          :path (str/split path "/")})]
 
-(defn- get-date []
-  (let [now (js/Date.)]
-    (gstring/format "%4d-%02d-%02d",
-                    (.getFullYear now)
-                    (.getUTCMonth now)
-                    (.getDate now))))
+    (swap! firebase set-new-values)))
+
+(defn- get-iso-date []
+  (.toISOString (js/Date.)))
+
+(defn- save-with-date [root path data]
+  (let [reports (match/get-in root path)
+        data (assoc data :date (get-iso-date))]
+    (match/conj! reports data)))
 
 (defn save [data]
   (let
-    [root (match/connect @base-uri)
-     date (get-date)]
+    [root (match/connect (:url @firebase))
+     path (:path @firebase)]
 
     (match/auth-anon root)
-
-    (def today-reports (match/get-in root [:reports date]))
-    (match/conj! today-reports data)
-
+    (save-with-date root path data)
     (match/unauth root)))
