@@ -40,6 +40,8 @@
 
   :figwheel {:css-dirs ["resources/public/css"]}
 
+  :clean-targets ^{:protect false} [:compiled-js "resources/public/js/compiled"]
+
   :hooks [minify-assets.plugin/hooks]
 
   :aliases {"dev"   ["pdo" ["figwheel"] ["minify-assets" "watch"]]
