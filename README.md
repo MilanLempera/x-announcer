@@ -1,14 +1,21 @@
 # x-announcer
 
-A Clojure library designed to ... well, that part is up to you.
+Web Component for reporting page content mistakes to firebase.
 
 ## Usage
+```
+<x-announcer firebase-url="some-firebase-url" firebase-path="path/in/firebase"></x-announcer>
+```
 
-FIXME
+### Tasks
+```
+lein build - for build to resources/public
+
+lein dev - for development with figwheel & livereload
+```
 
 ## License
 
-Copyright © 2016 FIXME
+Copyright © 2016 Milan Lempera
 
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+Distributed under the Eclipse Public License either version 1.0 or (at your option) any later version.
