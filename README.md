@@ -2,6 +2,8 @@
 
 Web Component for reporting page content mistakes to firebase.
 
+![preview](https://cloud.githubusercontent.com/assets/686532/18003597/f498ad38-6b8e-11e6-855d-6e522569133b.png)
+
 ## Usage
 ```html
 <x-announcer firebase-url="some-firebase-url" firebase-path="path/in/firebase"></x-announcer>
