@@ -37,6 +37,6 @@
                     :on-created on-created
                     :on-detached on-detached
                     :properties {:firebase-url  "https://shining-fire-1263.firebaseio.com/"
-                                 :firebase-path "reports"})
+                                 :firebase-path "x-announcer/reports"})
 
 (l/register x-announcer)
