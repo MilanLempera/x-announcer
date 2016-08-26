@@ -1,4 +1,4 @@
-(defproject x-announcer "0.1.0-SNAPSHOT"
+(defproject x-announcer "0.1.0"
   :description "Web Component for reporting page content mistakes"
   :url "https://github.com/MilanLempera/x-announcer"
   :license {:name "Eclipse Public License"
