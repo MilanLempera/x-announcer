@@ -3,7 +3,7 @@
 Web Component for reporting page content mistakes to firebase.
 
 ## Usage
-```
+```html
 <x-announcer firebase-url="some-firebase-url" firebase-path="path/in/firebase"></x-announcer>
 ```
 
