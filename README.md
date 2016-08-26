@@ -1,6 +1,6 @@
 # x-announcer
 
-Web Component for reporting page content mistakes to firebase.
+Web Component for reporting page content mistakes - Let users report yours mistakes simply.
 
 ![preview](https://cloud.githubusercontent.com/assets/686532/18003597/f498ad38-6b8e-11e6-855d-6e522569133b.png)
 
@@ -8,6 +8,10 @@ Web Component for reporting page content mistakes to firebase.
 ```html
 <x-announcer firebase-url="some-firebase-url" firebase-path="path/in/firebase"></x-announcer>
 ```
+
+## Features
+* it allows user to select text and report issue
+* stores data in firebase
 
 ### Tasks
 ```
