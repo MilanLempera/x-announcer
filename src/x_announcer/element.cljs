@@ -36,7 +36,7 @@
 (l/defcustomelement x-announcer
                     :on-created on-created
                     :on-detached on-detached
-                    :properties {:firebase-url  "https://shining-fire-1263.firebaseio.com/"
+                    :properties {:firebase-url  "https://x-announcer.firebaseio.com/"
                                  :firebase-path "x-announcer/reports"})
 
 (l/register x-announcer)
